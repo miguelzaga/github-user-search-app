@@ -12,20 +12,26 @@
     />
 
     <link rel="stylesheet" href="./app/stylesheets/css/style.css">
+    <script src="./app/js/script.js"></script>
 
     <title>Frontend Mentor | GitHub user search app</title>
   </head>
   <body>
     <header class="header">
       <h1 class="header__title">devfinder</h1>
-      <button class="header__toggle">Light Dark</button>
+      <button class="header__toggle--light">Dark
+        <!-- svg -->
+      </button>
+      <button class="header__toggle--dark" style="display:none;">Light
+        <!-- svg -->
+      </button>
       
     </header>
     <main>
       <div class="search-bar">Search GitHub username... Search</div>
       <section class="card">
         <div class="user">
-          <img src="" alt="" class="user__img" />
+          <img src="" alt="user profile picture" class="user__img" />
           <div class="user__info">
             <h2 class="user__name"></h1>
             <h3 class="user__username"></h2>
@@ -36,28 +42,28 @@
         <ul class="dashboard">
           <li class="dashboard__li">
             <span class="dashboard__li-title">Repos</span
-            ><span class="dashboard__li-data"></span>
+            ><span class="dashboard__li-data" id="repos-info"></span>
           </li>
           <li class="dashboard__li">
             <span class="dashboard__li-title">Followers</span
-            ><span class="dashboard__li-data"></span>
+            ><span class="dashboard__li-data" id="followers-info"></span>
           </li>
           <li class="dashboard__li">
             <span class="dashboard__li-title">Following</span
-            ><span class="dashboard__li-data"></span>
+            ><span class="dashboard__li-data" id="following-info"></span>
           </li>
         </ul>
         <ul class="links">
-          <li class="links__li">
+          <li class="links__li" id="location-info">
             <!-- svg -->
           </li>
-          <li class="links__li">
+          <li class="links__li" id="website-info">
             <!-- svg -->
           </li>
-          <li class="links__li">
+          <li class="links__li" id="twitter-info">
             <!-- svg -->
           </li>
-          <li class="links__li">
+          <li class="links__li" id="company-info">
             <!-- svg -->
           </li>
         </ul>
