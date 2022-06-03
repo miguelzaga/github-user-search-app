@@ -1,28 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | GitHub user search app</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  devfinder
+    <link rel="stylesheet" href="./app/stylesheets/css/style.css">
 
-  Light
-  Dark
+    <title>Frontend Mentor | GitHub user search app</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">devfinder</h1>
+      <button class="header__toggle">Light Dark</button>
+      
+    </header>
+    <main>
+      <div class="search-bar">Search GitHub username... Search</div>
+      <section class="card">
+        <div class="user">
+          <img src="" alt="" class="user__img" />
+          <div class="user__info">
+            <h2 class="user__name"></h1>
+            <h3 class="user__username"></h2>
+            <p class="user_date-joined">Joined</p>
+          </div>
+        </div>
+        <p class="description"></p>
+        <ul class="dashboard">
+          <li class="dashboard__li">
+            <span class="dashboard__li-title">Repos</span
+            ><span class="dashboard__li-data"></span>
+          </li>
+          <li class="dashboard__li">
+            <span class="dashboard__li-title">Followers</span
+            ><span class="dashboard__li-data"></span>
+          </li>
+          <li class="dashboard__li">
+            <span class="dashboard__li-title">Following</span
+            ><span class="dashboard__li-data"></span>
+          </li>
+        </ul>
+        <ul class="links">
+          <li class="links__li">
+            <!-- svg -->
+          </li>
+          <li class="links__li">
+            <!-- svg -->
+          </li>
+          <li class="links__li">
+            <!-- svg -->
+          </li>
+          <li class="links__li">
+            <!-- svg -->
+          </li>
+        </ul>
+      </section>
+    </main>
 
-  Search GitHub username...
-  Search
-
-  Joined
-
-  Repos
-  Followers
-  Following
-
-</body>
+         
+    
+  </body>
 </html>
