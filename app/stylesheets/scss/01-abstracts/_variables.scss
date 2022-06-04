@@ -1,1 +1,23 @@
 @use "./functions" as *;
+
+// Colors
+$highlight: #0079ff;
+
+// Colors - Light Mode
+$font-primary--light: #2b3442;
+$font-secondary--light: #4b6a9b;
+$font-terciary--light: #697c9a;
+$background-primary--light: #f6f8ff;
+$background-secondary--light: #fefefe;
+
+// Colors - Dark Mode
+$font--dark: #fff;
+$background-primary--dark: #141d2f;
+$background-secondary--dark: #1e2a47;
+
+
+// Breakpoints
+$sm: 320px;
+$md: 640px;
+$lg: 960px;
+$x-lg: 1024px;
