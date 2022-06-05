@@ -1,2 +1,51 @@
 @use "./../01-abstracts/" as *;
 
+body {
+  font-family: $font;
+  font-weight: 700;
+  font-size: rem(15px);
+  line-height: 25px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: rem(26px);
+  line-height: 38px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: rem(22px);
+  line-height: 33px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: 24px;
+  color: $highlight;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: rem(13px);
+  line-height: 28px;
+}
+
+@media (prefers-color-scheme: light) {
+  h1,
+  h2, 
+  body {
+    color: $font-primary--light;
+  }
+
+  h4 {
+      color: $font-secondary--light;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: $font--dark;
+  }
+}

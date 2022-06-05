@@ -1,5 +1,8 @@
 @use "./functions" as *;
 
+// Fonts
+$font: "Space Mono", monospace;
+
 // Colors
 $highlight: #0079ff;
 
@@ -14,7 +17,6 @@ $background-secondary--light: #fefefe;
 $font--dark: #fff;
 $background-primary--dark: #141d2f;
 $background-secondary--dark: #1e2a47;
-
 
 // Breakpoints
 $sm: 320px;

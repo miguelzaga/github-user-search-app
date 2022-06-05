@@ -1,6 +1,7 @@
 window.onload = function () {
   const img = document.querySelector(".user__img");
   const name = document.querySelector(".user__name");
+  const joined = document.querySelector("#joined-info");
   const userName = document.querySelector(".user__username");
   const description = document.querySelector(".description");
   const repos = document.querySelector("#repos-info");
@@ -13,6 +14,7 @@ window.onload = function () {
 
   img.setAttribute("src", "https://avatars.githubusercontent.com/u/583231?v=4");
   name.innerHTML = "The Octocat";
+  joined.innerHTML = "25 Jan 2011";
   userName.innerHTML = "@octocat";
   description.innerHTML =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam saepe libero aliquid alias explicabo! Quis nisi eos laborum quasi illo sit. Consequuntur cupiditate cumque porro officia, rem cum quae commodi.";
