@@ -2,26 +2,29 @@
 
 body {
   font-family: $font;
-  font-weight: 700;
-  font-size: rem(15px);
-  line-height: 25px;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: rem(16px);
-  line-height: 24px;
+  font-weight: 400;
+  color: $font-secondary--light;
+  font-size: rem(13px);
+  line-height: 19px;
 
   @include breakpoint($lg) {
-    font-size: rem(26px);
-    line-height: 38px;
+    font-size: rem(15px);
+    line-height: 25px;
   }
 }
 
-h2 {
-  font-weight: 400;
+.h1 {
+  font-weight: 700;
+  font-size: rem(16px);
+  line-height: 24px;
+  color: $font-primary--light;
+}
+
+.h2 {
+  font-weight: 700;
   font-size: rem(13px);
   line-height: 25px;
+  color: $font-primary--light;
 
   @include breakpoint($lg) {
     font-size: rem(22px);
@@ -29,7 +32,7 @@ h2 {
   }
 }
 
-h3 {
+.h3 {
   font-weight: 400;
   font-size: rem(13px);
   line-height: 19px;
@@ -41,7 +44,7 @@ h3 {
   }
 }
 
-h4 {
+.h4 {
   font-weight: 400;
   font-size: rem(11px);
   line-height: 16px;
@@ -49,18 +52,6 @@ h4 {
   @include breakpoint($lg) {
     font-size: rem(13px);
     line-height: 28px;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  h1,
-  h2,
-  body {
-    color: $font-primary--light;
-  }
-
-  h4 {
-    color: $font-secondary--light;
   }
 }
 

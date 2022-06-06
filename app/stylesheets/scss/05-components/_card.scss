@@ -31,9 +31,6 @@
   }
 
   &__date-joined {
-    font-weight: 400;
-    font-size: rem(13px);
-    line-height: 19px;
     color: $font-terciary--light;
     @media (prefers-color-scheme: dark) {
       color: $font--dark;
