@@ -1,0 +1,42 @@
+@use "../01-abstracts/" as *;
+
+.card {
+  background-color: $background-secondary--light;
+  margin: 16px 24px 80px;
+  padding: 32px 24px 48px;
+  border-radius: 15px;
+
+  @media (prefers-color-scheme: light) {
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $background-secondary--dark;
+  }
+}
+
+.user {
+  margin-bottom: 33px;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+
+  &__img {
+    width: 70px;
+    border-radius: 100%;
+  }
+
+  &__username {
+    margin-bottom: 6px;
+  }
+
+  &__date-joined {
+    font-weight: 400;
+    font-size: rem(13px);
+    line-height: 19px;
+    color: $font-terciary--light;
+    @media (prefers-color-scheme: dark) {
+      color: $font--dark;
+    }
+  }
+}

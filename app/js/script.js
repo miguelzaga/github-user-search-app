@@ -17,7 +17,7 @@ window.onload = function () {
   joined.innerHTML = "25 Jan 2011";
   userName.innerHTML = "@octocat";
   description.innerHTML =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam saepe libero aliquid alias explicabo! Quis nisi eos laborum quasi illo sit. Consequuntur cupiditate cumque porro officia, rem cum quae commodi.";
+    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
   repos.innerHTML = "8";
   followers.innerHTML = "3938";
   following.innerHTML = "9";
