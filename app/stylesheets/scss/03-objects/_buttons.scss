@@ -10,7 +10,20 @@
   gap: 16px;
   text-transform: uppercase;
   font-family: $font;
+  font-weight: 700;
   font-size: rem(13px);
   line-height: 19px;
   letter-spacing: 2.5px;
+}
+
+.search-btn {
+    color: $font--dark;
+    background-color: $highlight;
+    border: none;
+    border-radius: 10px;
+    font-family: $font;
+    font-size: rem(14px);
+    line-height: 21px;
+    height: 100%;
+    width: 84px;
 }

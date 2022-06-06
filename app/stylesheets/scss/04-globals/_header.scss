@@ -6,6 +6,13 @@
   justify-content: space-between;
   align-items: center;
 
+  &__title {
+    font-size: rem(26px);
+    font-weight: 700;
+    line-height: 39px;
+    color: #222731;
+  }
+
   &__toggle--light {
     color: $font-secondary--light;
   }
@@ -15,20 +22,18 @@
   }
 
   @media (prefers-color-scheme: light) {
-    &__title {
-      color: $font-primary--light;
-    }
-
     &__toggle--dark {
       display: none;
     }
   }
 
   @media (prefers-color-scheme: dark) {
+    &__title {
+      color: $font--dark;
+    }
+
     &__toggle--light {
       display: none;
     }
-
-
   }
 }
