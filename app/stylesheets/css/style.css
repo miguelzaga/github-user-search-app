@@ -366,4 +366,20 @@ body {
   }
 }
 
+.description {
+  margin: 33px 0 23px;
+  line-height: 25px;
+}
+
+.dashboard {
+  background-color: #f6f8ff;
+  border-radius: 10px;
+  margin: 23px 0 24px;
+  padding: 18px 14px 19px 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */
