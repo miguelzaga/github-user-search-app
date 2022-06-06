@@ -1,0 +1,34 @@
+@use "./../01-abstracts/" as *;
+
+.header {
+  margin: 31px 16px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__toggle--light {
+    color: $font-secondary--light;
+  }
+
+  &__toggle--dark {
+    color: $font--dark;
+  }
+
+  @media (prefers-color-scheme: light) {
+    &__title {
+      color: $font-primary--light;
+    }
+
+    &__toggle--dark {
+      display: none;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &__toggle--light {
+      display: none;
+    }
+
+
+  }
+}
