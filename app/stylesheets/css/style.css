@@ -133,6 +133,15 @@ table {
   border-spacing: 0;
 }
 
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 @media (prefers-color-scheme: light) {
   body {
     background-color: #f6f8ff;
@@ -309,11 +318,14 @@ body {
   font-family: "Space Mono", monospace;
   font-size: 0.8125rem;
   line-height: 25px;
-  color: #4b6a9b;
+  color: #222731;
   flex-grow: 1;
   padding: 0;
   margin-left: 9px;
   margin-right: 7px;
+}
+.search-bar__input::placeholder {
+  color: #4b6a9b;
 }
 @media (prefers-color-scheme: light) {
   .search-bar {

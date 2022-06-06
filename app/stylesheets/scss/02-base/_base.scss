@@ -1,4 +1,12 @@
 @use "./../01-abstracts/" as *;
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}
 
 @media (prefers-color-scheme: light) {
   body {

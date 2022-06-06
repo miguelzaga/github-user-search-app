@@ -21,11 +21,14 @@
     font-family: $font;
     font-size: rem(13px);
     line-height: 25px;
-    color: $font-secondary--light;
+    color: #222731;
     flex-grow: 1;
     padding: 0;
     margin-left: 9px;
     margin-right: 7px;
+    &::placeholder {
+      color: $font-secondary--light;
+    }
   }
 
   @media (prefers-color-scheme: light) {
