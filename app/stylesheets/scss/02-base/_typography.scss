@@ -22,8 +22,8 @@ body {
 
 .h2 {
   font-weight: 700;
-  font-size: rem(13px);
-  line-height: 25px;
+  font-size: rem(16px);
+  line-height: 24px;
   color: $font-primary--light;
 
   @include breakpoint($lg) {
