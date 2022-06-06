@@ -224,7 +224,9 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
+  body,
+.h1,
+.h2 {
     color: #fff;
   }
 }
@@ -380,6 +382,28 @@ body {
   justify-content: space-around;
   align-items: center;
   text-align: center;
+}
+.dashboard__li-title {
+  margin-bottom: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  .dashboard {
+    background-color: #141d2f;
+  }
+}
+
+.links {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 16px;
+}
+.links__li {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.links__li-location {
+  margin-right: 6px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -54,6 +54,28 @@
     text-align: center;
 
     &__li {
-        // width: 48px;
+        &-title {
+            margin-bottom: 8px;
+        }
+    }
+
+    @media (prefers-color-scheme: dark){
+        background-color: $background-primary--dark;
+    }
+}
+
+.links {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+
+    &__li {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+
+        &-location {
+            margin-right: 6px;
+        }
     }
 }

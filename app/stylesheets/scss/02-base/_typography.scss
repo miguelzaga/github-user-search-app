@@ -56,7 +56,9 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
+  body,
+  .h1,
+  .h2 {
     color: $font--dark;
   }
 }
