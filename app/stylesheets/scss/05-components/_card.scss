@@ -5,6 +5,11 @@
   margin-top: 16px;
   padding: 32px 24px 48px;
   border-radius: 15px;
+  
+  @include breakpoint($md) {
+    margin-top: 24px;
+    padding: 40px;
+  }
 
   @media (prefers-color-scheme: light) {
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
@@ -21,9 +26,18 @@
   align-items: center;
   gap: 19px;
 
+  @include breakpoint($md) {
+    gap: 41px;
+    margin-bottom: 24px;
+  }
+
   &__img {
     width: 70px;
     border-radius: 100%;
+
+    @include breakpoint($md) {
+      width: 117px;
+    }
   }
 
   &__username {
@@ -39,44 +53,65 @@
 }
 
 .description {
-    margin: 33px 0 23px;
-    line-height: 25px;
+  margin: 33px 0 23px;
+  line-height: 25px;
+
+  @include breakpoint($md) {
+    margin: 32px 0 30px;
+  }
 }
 
 .dashboard {
-    background-color: $background-primary--light;
-    border-radius: 10px;
-    margin: 23px 0 24px;
-    padding: 18px 14px 19px 15px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row wrap;
-    text-align: center;
+  background-color: $background-primary--light;
+  border-radius: 10px;
+  margin: 23px 0 24px;
+  padding: 18px 14px 19px 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  text-align: center;
 
-    &__li {
-        &-title {
-            margin-bottom: 8px;
-        }
-    }
+  @include breakpoint($md) {
+    text-align: left;
+    margin: 32px 0 30px;
+    padding: 15px 96px 17px 32px;
+    justify-content: space-between;
+  }
 
-    @media (prefers-color-scheme: dark){
-        background-color: $background-primary--dark;
+  &__li {
+    &-title {
+      margin-bottom: 8px;
+      @include breakpoint($md) {
+        margin-bottom: 1px;
+      }
     }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $background-primary--dark;
+  }
 }
 
 .links {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 16px;
+  line-height: 19px;
+
+  @include breakpoint($md){
+    row-gap: 19px;
+    column-gap: 0px;
+    max-height: 63px;
+  }
+
+  &__li {
     display: flex;
-    flex-flow: column nowrap;
-    gap: 16px;
+    align-items: center;
+    gap: 13px;
 
-    &__li {
-        display: flex;
-        align-items: center;
-        gap: 13px;
-
-        &-location {
-            margin-right: 6px;
-        }
+    &-location {
+      margin-right: 6px;
     }
+  }
 }

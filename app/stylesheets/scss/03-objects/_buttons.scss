@@ -17,12 +17,18 @@
 }
 
 .search-btn {
-    color: $font--dark;
-    background-color: $highlight;
-    border: none;
-    border-radius: 10px;
-    font-family: $font;
-    font-size: rem(14px);
-    line-height: 21px;
-    width: 84px;
+  color: $font--dark;
+  background-color: $highlight;
+  border: none;
+  border-radius: 10px;
+  font-family: $font;
+  font-size: rem(14px);
+  line-height: 21px;
+  width: 84px;
+
+  @include breakpoint($md) {
+    width: 106px;
+    font-size: rem(16px);
+    line-height: 24px;
+  }
 }
