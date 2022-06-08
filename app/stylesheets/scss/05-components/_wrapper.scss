@@ -8,5 +8,11 @@
       max-width: 573px;
       padding: 140px 0 236px;
       margin: 0 auto;
+    }
+    
+    @include breakpoint($lg){
+        max-width: 730px;
+        padding: 144px 0 170px;
+
   }
 }

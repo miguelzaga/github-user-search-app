@@ -333,6 +333,12 @@ body {
   height: 20px;
   align-self: center;
 }
+@media (min-width: 640px) {
+  .search-bar__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
 .search-bar__input {
   border: none;
   background-color: inherit;
@@ -344,6 +350,7 @@ body {
   padding: 0;
   margin-left: 9px;
   margin-right: 7px;
+  caret-color: #0079ff;
 }
 .search-bar__input::placeholder {
   color: #4b6a9b;
@@ -351,6 +358,7 @@ body {
 @media (min-width: 640px) {
   .search-bar__input {
     font-size: 1.125rem;
+    margin-left: 24px;
   }
 }
 @media (prefers-color-scheme: light) {
@@ -499,9 +507,19 @@ body {
     margin: 0 auto;
   }
 }
+@media (min-width: 960px) {
+  .wrapper {
+    max-width: 730px;
+    padding: 144px 0 170px;
+  }
+}
 
 .opaque {
   opacity: 0.5;
+}
+.opaque a:hover {
+  text-decoration: none;
+  cursor: default;
 }
 
 /*# sourceMappingURL=style.css.map */
