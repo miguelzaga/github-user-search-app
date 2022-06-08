@@ -387,6 +387,11 @@ body {
     padding: 40px;
   }
 }
+@media (min-width: 960px) {
+  .card {
+    padding: 48px;
+  }
+}
 @media (prefers-color-scheme: light) {
   .card {
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
@@ -410,6 +415,12 @@ body {
     margin-bottom: 24px;
   }
 }
+@media (min-width: 960px) {
+  .user {
+    position: relative;
+    margin-bottom: 20px;
+  }
+}
 .user__img {
   width: 70px;
   border-radius: 100%;
@@ -417,6 +428,18 @@ body {
 @media (min-width: 640px) {
   .user__img {
     width: 117px;
+  }
+}
+@media (min-width: 960px) {
+  .user__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@media (min-width: 960px) {
+  .user__info {
+    margin-left: 154px;
   }
 }
 .user__username {
@@ -430,6 +453,13 @@ body {
     color: #fff;
   }
 }
+@media (min-width: 960px) {
+  .user__date-joined {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
 
 .description {
   margin: 33px 0 23px;
@@ -438,6 +468,11 @@ body {
 @media (min-width: 640px) {
   .description {
     margin: 32px 0 30px;
+  }
+}
+@media (min-width: 960px) {
+  .description {
+    margin: 20px 0 32px 154px;
   }
 }
 
@@ -458,6 +493,12 @@ body {
     margin: 32px 0 30px;
     padding: 15px 96px 17px 32px;
     justify-content: space-between;
+  }
+}
+@media (min-width: 960px) {
+  .dashboard {
+    margin: 32px 0 37px 154px;
+    padding: 15px 83px 17px 32px;
   }
 }
 .dashboard__li-title {
@@ -485,6 +526,11 @@ body {
     row-gap: 19px;
     column-gap: 0px;
     max-height: 63px;
+  }
+}
+@media (min-width: 960px) {
+  .links {
+    margin: 37px 0 0 154px;
   }
 }
 .links__li {
