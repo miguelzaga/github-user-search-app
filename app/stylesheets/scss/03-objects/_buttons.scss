@@ -24,7 +24,12 @@
   font-family: $font;
   font-size: rem(14px);
   line-height: 21px;
-  width: 84px;
+  min-width: 84px;
+  min-height: 46px;
+  flex-shrink: 0;
+  &:hover {
+    background-color: $highlight-hover;
+  }
 
   @include breakpoint($md) {
     width: 106px;
