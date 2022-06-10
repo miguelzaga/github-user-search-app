@@ -1,9 +1,14 @@
 window.onload = function () {
   renderData();
 
-  const body = document.querySelector("body");
   const searchBtn = document.querySelector("#search-btn");
-  searchBtn.addEventListener("click", function toggleTheme() {
+  const toggleBtn = document.querySelector("#toggle-btn-js");
+
+  searchBtn.addEventListener("click", function searchUser() {
+    console.log("click");
+  });
+
+  toggleBtn.addEventListener("click", function toggleTheme() {
     console.log("click");
   });
 
