@@ -5,20 +5,28 @@ $font: "Space Mono", monospace;
 
 // Colors
 $highlight: #0079ff;
-$highlight-hover: #60ABFF;
-$error: #F74646;
-
-// Colors - Light Mode
-$font-primary--light: #2b3442;
-$font-secondary--light: #4b6a9b;
-$font-terciary--light: #697c9a;
-$background-primary--light: #f6f8ff;
-$background-secondary--light: #fefefe;
+$highlight-hover: #60abff;
+$error: #f74646;
 
 // Colors - Dark Mode
 $font--dark: #fff;
-$background-primary--dark: #141d2f;
-$background-secondary--dark: #1e2a47;
+
+:root {
+  // Colors - Light Mode
+  --color-font-1: #2b3442;
+  --color-font-2: #4b6a9b;
+  --color-font-3: #697c9a;
+  --color-bg-1: #f6f8ff;
+  --color-bg-2: #fefefe;
+}
+
+.dark {
+  --color-font-1: #fff;
+  --color-font-2: #fff;
+  --color-font-3: #fff;
+  --color-bg-1: #141d2f;
+  --color-bg-2: #1e2a47;
+}
 
 // Breakpoints
 $sm: 320px;

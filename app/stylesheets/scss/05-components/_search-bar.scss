@@ -1,7 +1,7 @@
 @use "../01-abstracts/" as *;
 
 .search-bar {
-  background-color: $background-secondary--light;
+  background-color: var(--color-bg-1);
   border-radius: 15px;
   margin: 36px 0 16px;
   min-height: 60px;
@@ -39,7 +39,7 @@
     margin-right: 7px;
     caret-color: $highlight;
     &::placeholder {
-      color: $font-secondary--light;
+      color: var(--color-font-2);
     }
 
     @include breakpoint($md) {
@@ -62,11 +62,11 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: $background-secondary--dark;
+    background-color: var(--color-bg-2);
 
     &__input,
     &__input::placeholder {
-      color: $font--dark;
+      
     }
   }
 }

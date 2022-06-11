@@ -1,7 +1,7 @@
 @use "../01-abstracts/" as *;
 
 .card {
-  background-color: $background-secondary--light;
+  background-color: var(--color-bg-1);
   margin-top: 16px;
   padding: 32px 24px 48px;
   border-radius: 15px;
@@ -20,7 +20,7 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: $background-secondary--dark;
+    background-color: var(--color-bg-2);
   }
 }
 
@@ -65,9 +65,9 @@
   }
 
   &__date-joined {
-    color: $font-terciary--light;
+    color: var(--color-font-3);
     @media (prefers-color-scheme: dark) {
-      color: $font--dark;
+      
     }
 
     @include breakpoint($lg) {
@@ -91,7 +91,7 @@
 }
 
 .dashboard {
-  background-color: $background-primary--light;
+  background-color: var(--color-bg-1);
   border-radius: 10px;
   margin: 23px 0 24px;
   padding: 18px 14px 19px 15px;
@@ -123,7 +123,7 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: $background-primary--dark;
+    background-color: var(--color-bg-1);
   }
 }
 

@@ -15,11 +15,11 @@
   }
 
   &__toggle--light {
-    color: $font-secondary--light;
+    color: var(--color-font-2);
   }
 
   &__toggle--dark {
-    color: $font--dark;
+    
   }
 
   @media (prefers-color-scheme: light) {
@@ -30,7 +30,7 @@
 
   @media (prefers-color-scheme: dark) {
     &__title {
-      color: $font--dark;
+      
     }
 
     &__toggle--light {

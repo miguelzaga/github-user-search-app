@@ -9,7 +9,7 @@ window.onload = function () {
   });
 
   toggleBtn.addEventListener("click", function toggleTheme() {
-    console.log("click");
+    document.querySelector('html').classList.toggle('dark')
   });
 
   function renderData() {
