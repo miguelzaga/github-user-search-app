@@ -32,7 +32,7 @@
     font-family: $font;
     font-size: rem(13px);
     line-height: 25px;
-    color: #222731;
+    color: var(--color-title);
     flex-grow: 1;
     min-width: 0;
     padding: 0;

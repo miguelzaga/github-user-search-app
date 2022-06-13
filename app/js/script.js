@@ -1,12 +1,27 @@
 window.onload = function () {
-  const searchBtn = document.querySelector("#search-btn");
-  const themeBtn = document.querySelector("#toggle-btn");
+  const searchBtn = document.getElementById("search-bar");
+  const themeBtn = document.getElementById("toggle-btn");
+  const noResultMsg = document.getElementById("no-result");
 
   setUpDarkMode();
-  renderData();
+  getUserData("octocat").then(function (userData) {
+    renderData(userData);
+  });
 
-  searchBtn.addEventListener("click", function searchUser() {
-    console.log("click");
+  searchBtn.addEventListener("submit", function searchUser(e) {
+    e.preventDefault();
+    noResultMsg.classList.add("hidden");
+    searchValue = e.target.querySelector("input").value;
+    getUserData(searchValue)
+      .then(function (userData) {
+        if (userData.message == "Not Found") {
+          noResultMsg.classList.remove("hidden");
+        }
+        renderData(userData);
+      })
+      .catch(function (error) {
+        console.log("error:", error);
+      });
   });
 
   function setUpDarkMode() {
@@ -35,35 +50,47 @@ window.onload = function () {
     });
   }
 
-  function renderData() {
-    const img = document.querySelector(".user__img");
-    const name = document.querySelector(".user__name");
-    const joined = document.querySelector("#joined-info");
-    const userName = document.querySelector(".user__username");
-    const description = document.querySelector(".description");
-    const repos = document.querySelector("#repos-info");
-    const followers = document.querySelector("#followers-info");
-    const following = document.querySelector("#following-info");
-    const location = document.querySelector("#location-info");
-    const website = document.querySelector("#website-info");
-    const twitter = document.querySelector("#twitter-info");
-    const company = document.querySelector("#company-info");
+  async function getUserData(user) {
+    const URL = "https://api.github.com/users/" + user;
+    const response = await fetch(URL);
+    return await response.json();
+  }
 
-    img.setAttribute(
-      "src",
-      "https://avatars.githubusercontent.com/u/583231?v=4"
-    );
-    name.innerHTML = "The Octocat";
-    joined.innerHTML = "25 Jan 2011";
-    userName.innerHTML = "@octocat";
-    description.innerHTML =
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
-    repos.innerHTML = "8";
-    followers.innerHTML = "3938";
-    following.innerHTML = "9";
-    location.innerHTML = "San Fransisco";
-    website.innerHTML = "https://github.blog";
-    twitter.innerHTML = "Not Available";
-    company.innerHTML = "@github";
+  function renderData(userObj) {
+    Object.keys(userObj).forEach(function loopKeys(key) {
+      let element = document.getElementById(key);
+      if (element) {
+        if (userObj[key]) {
+          element.parentElement.classList.remove("opaque");
+          element.classList.remove("opaque");
+          switch (key) {
+            case "avatar_url":
+              element.setAttribute("src", userObj[key]);
+              break;
+            case "created_at":
+              let date = new Date(userObj[key]);
+              let options = { day: "numeric", month: "long", year: "numeric" };
+              let parsedDate = new Intl.DateTimeFormat("en-GB", options).format(
+                date
+              );
+              element.innerHTML = parsedDate;
+              break;
+            case "login":
+            case "twitter_username":
+              element.innerHTML = "@" + userObj[key];
+              break;
+            default:
+              element.innerHTML = userObj[key];
+          }
+        } else {
+          element.innerHTML = "Not Available";
+          if (element.parentElement.nodeName == "LI") {
+            element.parentElement.classList.add("opaque");
+          } else {
+            element.classList.add("opaque");
+          }
+        }
+      }
+    });
   }
 };

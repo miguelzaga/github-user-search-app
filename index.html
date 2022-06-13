@@ -50,7 +50,7 @@
         </div>
       </header>
       <main>
-        <div class="search-bar">
+        <form id="search-bar" class="search-bar">
           <img
             class="search-bar__icon"
             src="./app/assets/icon-search.svg"
@@ -61,35 +61,35 @@
             type="text"
             placeholder="Search GitHub username…"
           />
-          <span class="search-bar__error hidden">No results</span>
+          <span id="no-result" class="search-bar__error hidden">No results</span>
           <button id="search-btn" class="search-bar__btn search-btn">
             Search
           </button>
-        </div>
+        </form>
         <section class="card">
           <div class="user">
-            <img src="" alt="user profile picture" class="user__img" />
+            <img id="avatar_url" src="" alt="user profile picture" class="user__img" />
             <div class="user__info">
-              <h2 class="user__name h1"></h2>
-              <h3 class="user__username h3"></h3>
+              <h2 id="name" class="user__name h1"></h2>
+              <h3 id="login" class="user__username h3"></h3>
               <p class="user__date-joined">
-                Joined <span id="joined-info"></span>
+                Joined <span id="created_at"></span>
               </p>
             </div>
           </div>
-          <p class="description"></p>
+          <p id="bio" class="description"></p>
           <ul class="dashboard">
             <li class="dashboard__li">
               <h4 class="dashboard__li-title h4">Repos</h4>
-              <span class="dashboard__li-data h2" id="repos-info"></span>
+              <span class="dashboard__li-data h2" id="public_repos"></span>
             </li>
             <li class="dashboard__li">
               <h4 class="dashboard__li-title h4">Followers</h4>
-              <span class="dashboard__li-data h2" id="followers-info"></span>
+              <span class="dashboard__li-data h2" id="followers"></span>
             </li>
             <li class="dashboard__li">
               <h4 class="dashboard__li-title h4">Following</h4>
-              <span class="dashboard__li-data h2" id="following-info"></span>
+              <span class="dashboard__li-data h2" id="following"></span>
             </li>
           </ul>
           <ul class="links">
@@ -104,7 +104,7 @@
                   d="M12.797 3.425C11.584 1.33 9.427.05 7.03.002a7.483 7.483 0 00-.308 0C4.325.05 2.17 1.33.955 3.425a6.963 6.963 0 00-.09 6.88l4.959 9.077.007.012c.218.38.609.606 1.045.606.437 0 .828-.226 1.046-.606l.007-.012 4.96-9.077a6.963 6.963 0 00-.092-6.88zm-5.92 5.638c-1.552 0-2.813-1.262-2.813-2.813s1.261-2.812 2.812-2.812S9.69 4.699 9.69 6.25 8.427 9.063 6.876 9.063z"
                 />
               </svg>
-              <a id="location-info"></a>
+              <a id="location"></a>
             </li>
             <li class="links__li">
               <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +117,7 @@
                   />
                 </g>
               </svg>
-              <a id="website-info"></a>
+              <a id="blog"></a>
             </li>
             <li class="links__li opaque">
               <svg height="18" width="20" xmlns="http://www.w3.org/2000/svg">
@@ -125,7 +125,7 @@
                   d="M20 2.799a8.549 8.549 0 01-2.363.647 4.077 4.077 0 001.804-2.266 8.194 8.194 0 01-2.6.993A4.099 4.099 0 009.75 4.977c0 .324.027.637.095.934-3.409-.166-6.425-1.8-8.452-4.288a4.128 4.128 0 00-.56 2.072c0 1.42.73 2.679 1.82 3.408A4.05 4.05 0 01.8 6.598v.045a4.119 4.119 0 003.285 4.028 4.092 4.092 0 01-1.075.135c-.263 0-.528-.015-.776-.07.531 1.624 2.038 2.818 3.831 2.857A8.239 8.239 0 01.981 15.34 7.68 7.68 0 010 15.285a11.543 11.543 0 006.29 1.84c7.545 0 11.67-6.25 11.67-11.667 0-.182-.006-.357-.015-.53A8.18 8.18 0 0020 2.798z"
                 />
               </svg>
-              <a id="twitter-info"></a>
+              <a id="twitter_username"></a>
             </li>
             <li class="links__li">
               <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
@@ -135,7 +135,7 @@
                   />
                 </g>
               </svg>
-              <a id="company-info"></a>
+              <a id="company"></a>
             </li>
           </ul>
         </section>
