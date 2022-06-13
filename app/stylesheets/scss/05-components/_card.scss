@@ -15,7 +15,7 @@
   @include breakpoint($lg) {
     padding: 48px;
   }
-  
+
   .dark & {
     box-shadow: none;
   }
@@ -63,9 +63,6 @@
 
   &__date-joined {
     color: var(--color-font-3);
-    @media (prefers-color-scheme: dark) {
-      
-    }
 
     @include breakpoint($lg) {
       position: absolute;
@@ -104,8 +101,8 @@
     padding: 15px 96px 17px 32px;
     justify-content: space-between;
   }
-  
-  @include breakpoint($lg){
+
+  @include breakpoint($lg) {
     margin: 32px 0 37px 154px;
     padding: 15px 83px 17px 32px;
   }
