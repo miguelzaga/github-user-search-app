@@ -76,9 +76,15 @@ window.onload = function () {
               element.innerHTML = parsedDate;
               break;
             case "login":
-            case "twitter_username":
               element.innerHTML = "@" + userObj[key];
               break;
+            case "twitter_username":
+              let twitterUrl = "https://www.twitter.com/" + userObj[key];
+              element.innerHTML = "@" + userObj[key];
+              element.setAttribute("href", twitterUrl);
+              break;
+            case "blog":
+              element.setAttribute("href", userObj[key]);
             default:
               element.innerHTML = userObj[key];
           }
