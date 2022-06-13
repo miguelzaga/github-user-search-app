@@ -5,6 +5,7 @@
   margin-top: 16px;
   padding: 32px 24px 48px;
   border-radius: 15px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 
   @include breakpoint($md) {
     margin-top: 24px;
@@ -14,9 +15,9 @@
   @include breakpoint($lg) {
     padding: 48px;
   }
-
-  @media (prefers-color-scheme: light) {
-    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  
+  .dark & {
+    box-shadow: none;
   }
 }
 
