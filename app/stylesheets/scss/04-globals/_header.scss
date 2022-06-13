@@ -13,16 +13,4 @@
     line-height: 39px;
     color: var(--color-title);
   }
-
-  @media (prefers-color-scheme: light) {
-    &__toggle--dark {
-      display: none;
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    &__toggle--light {
-      display: none;
-    }
-  }
 }

@@ -1,16 +1,39 @@
 window.onload = function () {
-  renderData();
-
   const searchBtn = document.querySelector("#search-btn");
-  const toggleBtn = document.querySelector("#toggle-btn-js");
+  const themeBtn = document.querySelector("#toggle-btn");
+
+  setUpDarkMode();
+  renderData();
 
   searchBtn.addEventListener("click", function searchUser() {
     console.log("click");
   });
 
-  toggleBtn.addEventListener("click", function toggleTheme() {
-    document.querySelector('html').classList.toggle('dark')
-  });
+  function setUpDarkMode() {
+    function toggleThemeBtn() {
+      document.getElementById("toggle-light").classList.toggle("hidden");
+      document.getElementById("toggle-dark").classList.toggle("hidden");
+    }
+
+    function toggleDarkMode(state) {
+      document.documentElement.classList.toggle("dark", state);
+    }
+
+    const useDark = window.matchMedia("(prefers-color-scheme: dark)");
+    useDark.addEventListener("change", function listenToThemeChange(e) {
+      toggleDarkMode(e.matches);
+      toggleThemeBtn();
+    });
+
+    // Initialize dark mode if matches with OS settings
+    toggleDarkMode(useDark.matches);
+
+    // Adds event listener to toggle dark mode with btn
+    themeBtn.addEventListener("click", function toggleTheme(e) {
+      document.documentElement.classList.toggle("dark");
+      toggleThemeBtn();
+    });
+  }
 
   function renderData() {
     const img = document.querySelector(".user__img");

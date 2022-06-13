@@ -303,16 +303,6 @@ body {
   line-height: 39px;
   color: var(--color-title);
 }
-@media (prefers-color-scheme: light) {
-  .header__toggle--dark {
-    display: none;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .header__toggle--light {
-    display: none;
-  }
-}
 
 .search-bar {
   background-color: var(--color-bg-2);
