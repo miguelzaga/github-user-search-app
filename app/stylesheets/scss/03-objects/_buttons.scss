@@ -15,11 +15,13 @@
   font-size: rem(13px);
   line-height: 19px;
   letter-spacing: 2.5px;
+  &:hover {
+    color: var(--color-hover-toggle);
+  }
 }
 
 .search-btn {
   color: $white;
-  
   background-color: $highlight;
   border: none;
   border-radius: 10px;
