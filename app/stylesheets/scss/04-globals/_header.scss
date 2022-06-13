@@ -11,15 +11,7 @@
     font-size: rem(26px);
     font-weight: 700;
     line-height: 39px;
-    color: #222731;
-  }
-
-  &__toggle--light {
-    color: var(--color-font-2);
-  }
-
-  &__toggle--dark {
-    
+    color: var(--color-title);
   }
 
   @media (prefers-color-scheme: light) {
@@ -29,10 +21,6 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    &__title {
-      
-    }
-
     &__toggle--light {
       display: none;
     }

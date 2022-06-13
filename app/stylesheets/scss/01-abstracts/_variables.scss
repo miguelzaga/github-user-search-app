@@ -7,15 +7,16 @@ $font: "Space Mono", monospace;
 $highlight: #0079ff;
 $highlight-hover: #60abff;
 $error: #f74646;
+$white: #fff;
 
 // Colors - Dark Mode
-$font--dark: #fff;
 
 :root {
   // Colors - Light Mode
   --color-font-1: #2b3442;
   --color-font-2: #4b6a9b;
   --color-font-3: #697c9a;
+  --color-title: #222731;
   --color-bg-1: #f6f8ff;
   --color-bg-2: #fefefe;
 }
@@ -24,6 +25,7 @@ $font--dark: #fff;
   --color-font-1: #fff;
   --color-font-2: #fff;
   --color-font-3: #fff;
+  --color-title: #fff;
   --color-bg-1: #141d2f;
   --color-bg-2: #1e2a47;
 }
